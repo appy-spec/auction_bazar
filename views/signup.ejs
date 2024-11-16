@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - Auction Platform</title>
+  <link href="/css/signup.css" rel="stylesheet"></style>
+
+</head>
+<body>
+  <div class="signup-container">
+    <h1>Create Your Account</h1>
+    <p>Start exploring and bidding on exclusive auctions!</p>
+    <form method="POST" action="/login">
+      <input type="text" placeholder="Full Name" required name="name">
+      <input type="email" placeholder="Email Address" required name="email">
+      <input type="password" placeholder="Password" required name="password">
+      <input type="password" placeholder="Confirm Password" required name="confirmPassword">
+      <% if (error) { %>
+        <p style="color: red; border: 1px solid red; padding: 10px;">
+            <%= error %>
+        </p>
+      <% } %>
+      <p class="message"></p>
+      <div class="terms">
+        <input type="checkbox" required> I agree to the <a href="#">Terms & Conditions</a>
+      </div><br>
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="social-login">
+      <button class="google">Sign Up with Google</button>
+      <button class="facebook">Sign Up with Facebook</button>
+    </div>
+  </div>
+ 
+  <script src="/js/app.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #f3f4f6, #e5e7eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.signup-container h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.signup-container p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.signup-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9fafb;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.signup-container input:focus {
+    border-color: #2563eb;
+    outline: none;
+    background: #ffffff;
+}
+
+.signup-container button {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, 0.3s;
+}
+
+.signup-container button:hover {
+    transform: translateY(-3px);
+    background: #1d4ed8;
+}
+
+.signup-container .social-login {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.signup-container .social-login button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.social-login button.google {
+    background: #ea4335;
+}
+
+.social-login button.facebook {
+    background: #1877f2;
+}
+
+.terms {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+.terms a {
+    color: #2563eb;
+    text-decoration: none;
+}
