@@ -1,5 +1,5 @@
 # auction_bazar
-#Steps to use it
+**#Steps to use it**
 
 1. `npm init -y`  
 2. `npm i`  
