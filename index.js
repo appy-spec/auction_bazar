@@ -59,11 +59,17 @@ app.get("/login/new", (req,res)=>{
 
 });
 
-app.post("/login", (req,res)=>{
+app.post("/login",async (req,res)=>{
 
   let{name,email,password,confirmPassword}=req.body;
-  
-  if(password!=confirmPassword){
+
+  let dbEmail=await Data.find({email:email});
+  if(email==(dbEmail[0].email)){
+
+    res.render("signup.ejs", {error:"Already register with this email"});
+
+  }
+  else if(password!=confirmPassword){
 
     res.render("signup.ejs", {error:"Both password should be same"});
     
@@ -83,7 +89,7 @@ app.post("/login", (req,res)=>{
     }).catch((err)=>{
       console.log(err);
     });
-    res.render("login.ejs",{error:""});
+    res.render("login.ejs", {error:""});
   }
 
 });
